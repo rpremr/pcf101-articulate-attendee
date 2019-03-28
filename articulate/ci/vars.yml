@@ -1,9 +1,0 @@
-app-name: pcf101-demo-articulate
-app-host: pcf101-demo-articulate
-
-pcf-api: api.run.haas-220.pez.pivotal.io
-pcf-username: admin
-pcf-password: JZzt4kuz_2WWQ663vcWPphBe6kqY-Dj4
-pcf-domain: cfapps.haas-220.pez.pivotal.io
-pcf-organization: NSPARC
-pcf-space: dev
