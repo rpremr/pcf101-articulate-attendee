@@ -13,18 +13,18 @@ jobs:
   #1. Get source code from repo like Git
   - get: resource-git
     trigger: true
-  
+
   #2. Build it with unit tests embedded
   - task: build-artifacts
     file: resource-git/articulate/ci/tasks/build.yml
-  
+
   #3. Deploy it to PCF
   - put: resource-pcf
     params:
       manifest: resource-git/articulate/manifest-demo.yml
       path: artifacts/articulate-*.jar
       current_app_name: ((app-name))
-  
+
   # Verify the app whether it's been successfully deployed
   - get: image-javagradlegitpack
   - task: smoke-tests
@@ -39,7 +39,7 @@ resources:
 - name: resource-git
   type: git
   source:
-    uri: https://github.com/brightzheng100/pcf101-articulate-attendee
+    uri: https://github.com/rpremr/pcf101-articulate-attendee
     branch: master
 
 # CF
